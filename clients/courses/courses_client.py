@@ -4,7 +4,6 @@ from clients.private_http_builder import get_private_http_client, Authentication
 from clients.courses.courses_schema import GetCoursesQuerySchema, CreateCourseRequestSchema, UpdateCourseRequestSchema, CreateCourseResponseSchema
 
 
-
 class CoursesClient(APIClient):
     """
     Клиент для работы с /api/v1/courses
