@@ -1,5 +1,5 @@
 from clients.users.public_users_client import get_public_users_client, CreateUserRequestDict
-from clients.users.private_users_client import get_private_users_client, AuthenticationUserDict
+from clients.users.private_users_client import get_private_users_client, AuthenticationUserSchema
 from tools.fakers import get_random_email
 
 public_users_client = get_public_users_client()
@@ -15,7 +15,7 @@ create_user_request = CreateUserRequestDict(
 create_user_response = public_users_client.create_user(create_user_request)
 print('Create user data:', create_user_response)
 
-authentication_user = AuthenticationUserDict(
+authentication_user = AuthenticationUserSchema(
     email=create_user_request['email'],
     password=create_user_request['password']
 )
