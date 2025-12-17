@@ -4,7 +4,8 @@ from clients.files.files_schema import CreateFileRequestSchema
 from tools.fakers import get_random_email
 from clients.private_http_builder import AuthenticationUserSchema
 from clients.files.files_client import get_files_client
-from clients.courses.courses_client import get_courses_client, CreateCourseRequestDict
+from clients.courses.courses_client import get_courses_client
+from clients.courses.courses_schema import CreateCourseRequestSchema
 
 public_users_client = get_public_users_client()
 
@@ -36,7 +37,7 @@ create_file_response = files_client.create_file(create_file_request)
 print('Create file data:', create_file_response)
 
 # Создаем курс
-create_course_request = CreateCourseRequestDict(
+create_course_request = CreateCourseRequestSchema(
     title='Python',
     maxScore=100,
     minScore=10,

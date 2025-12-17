@@ -1,7 +1,7 @@
 from pydantic import BaseModel, EmailStr, Field, ConfigDict
 
 
-class UserSchema(BaseModel):
+class UserSchema(BaseModel): 
     """
     Описание структуры пользователя.
     """
