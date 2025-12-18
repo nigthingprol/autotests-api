@@ -1,13 +1,12 @@
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
-from tools.fakers import get_random_email
-import jsonschema
+from tools.fakers import fakeimport jsonschema
 from tools.assertions.schema import validate_json_schema
 
 public_users_client = get_public_users_client()
 
 create_user_request = CreateUserRequestSchema(
-    email = get_random_email(),
+    email = fake.email(),
     password = 'Region54',
     last_name = 'Nalivayko',
     first_name = 'Maksim',

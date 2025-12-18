@@ -37,7 +37,7 @@ class PrivateUsersClient(APIClient):
         return self.patch("/api/v1/users/{user_id}", json=request.model_dump(by_alias=True))
     
     def delete_user_api(self, user_id: str) -> Response:
-        """
+        """ 
         Метод удаления пользователя по идентификатору.
 
         :param user_id: Идентификатор пользователя.

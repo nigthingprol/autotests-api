@@ -1,6 +1,6 @@
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema
-from tools.fakers import get_random_email
+from tools.fakers import fake
 from clients.private_http_builder import AuthenticationUserSchema
 from clients.files.files_client import get_files_client
 from clients.files.files_schema import CreateFileRequestSchema
@@ -13,7 +13,7 @@ public_users_client = get_public_users_client()
 
 # Создаем пользователя
 create_user_request = CreateUserRequestSchema(
-    email = get_random_email(),
+    email = fake.email(),
     password = 'Region54',
     last_name = 'Nalivayko',
     first_name = 'Maksim',
