@@ -1,4 +1,4 @@
-from tests.conftest import UserFixture
+from fixtures.users import UserFixture
 from clients.authentication.authentication_client import AuthenticationClient
 from clients.authentication.authentication_schema import LoginRequestSchema, LoginResponseSchema
 from tools.assertions.base import assert_status_code
